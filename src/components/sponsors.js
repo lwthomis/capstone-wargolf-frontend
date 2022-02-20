@@ -1,10 +1,9 @@
 import React from 'react';
-
 import footjoy from '../images/logos/footjoy-logo-white.png';
 import titleist from '../images/logos/titleist-logo-white.png';
 
-export const Sponsors = () => {
-    return (
+function Sponsors() {
+  return (
         <div className='sponsors-wrapper'>
             <h3 className='sponsors'>Jr Affiliations</h3>
             <div className='sponsor-logo'>
@@ -18,4 +17,6 @@ export const Sponsors = () => {
         </div>
     )
 }
+
+export default Sponsors
 
