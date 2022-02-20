@@ -30,7 +30,7 @@ function ScheduleManager() {
           <Tournaments />
         </div>
         : 
-        <div>Sorry. You must login as an administrator to view this page.</div>
+        <div className='sorry-msg'>Sorry. You must login as an administrator to view this page.</div>
         }  
     </div>
   )

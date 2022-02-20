@@ -19,6 +19,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
+.sorry-msg {
+    text-align: center;
+    margin-top: 40px;
+    font-size: large;
+}
 
 @media (max-width: 750px) {
     .app {

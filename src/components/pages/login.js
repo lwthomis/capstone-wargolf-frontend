@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
  
 function Login() {
@@ -9,10 +9,6 @@ function Login() {
 
   let navigate = useNavigate();
 
-  function refreshPage() {
-      window.location.reload(false);
-  }
-
   const handleClick = (event) => {
     event.preventDefault();
     
@@ -21,23 +17,15 @@ function Login() {
         password: password
         })
         .then(function(response){
-            console.log(response);
             if (response.data.data.isAdmin === true){
                 sessionStorage.setItem("islogin", true);
                 sessionStorage.setItem("isAdmin", true);
                 navigate('/schedule/manager');
                 window.location.reload(false);
             }
-            else if(response.data.data.isAdmin === false){
-                sessionStorage.setItem("islogin", true);
-                sessionStorage.setItem('isAdmin', false);
-                navigate('/');
-                window.location.reload(false);
-            }
-            else 
-              console.log("Invalid Login Credentials");
         })
         .catch(function(error){
+            alert("Invalid Login Credentials");
             console.log(error);
         });
   };
@@ -60,8 +48,6 @@ function Login() {
       {error && <><small style={{ color: 'red' }}>{error}</small><br /></>}<br />
       <div className='button-wrapper'>
         <button className="submit-button login-button" onClick={handleClick} type='submit'>Login</button>
-        <div>or...</div>
-        <Link to="/register"><button className="submit-button register-button">Sign Up New User</button></Link>
       </div>
     </div>
   );
