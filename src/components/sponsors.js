@@ -7,10 +7,10 @@ function Sponsors() {
         <div className='sponsors-wrapper'>
             <h3 className='sponsors'>Jr Affiliations</h3>
             <div className='sponsor-logo'>
-                <a href='https:/titleist.com' alt="titleist logo" rel="noreferrer" target="_blank">            
+                <a href='https://www.titleist.com/' alt="titleist logo" rel="noreferrer" target="_blank">            
                     <img src={titleist} alt='titleist'/>
                 </a>
-                <a href='https:/footjoy.com' alt="titleist logo" rel="noreferrer" target="_blank">            
+                <a href='https://www.footjoy.com/' alt="titleist logo" rel="noreferrer" target="_blank">            
                     <img src={footjoy} alt='footjoy'/>
                 </a>
             </div>
