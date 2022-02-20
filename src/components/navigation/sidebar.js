@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Articles from '../articles';
 import SocialMediaLinks from '../social-media';
 import blackLogo from '../../images/logos/warren-logo-2024-black.png';
-import { Sponsors } from '../sponsors';
+import Sponsors from '../sponsors';
 import Contact from '../contact';
 
 
